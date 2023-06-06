@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const { getCustomerOrders, createOrder } = require("../../services/orders");
+const {
+  getCustomerOrders,
+  createOrder,
+  getOrders,
+} = require("../../services/orders");
 
 router.get("/", async (req, res, next) => {
-  const data = await getCustomerOrders();
+  const data = await getOrders();
   res.json(data);
 });
 
-router.get("/orders/customer", async (req, res, next) => {
+router.get("/customer", async (req, res, next) => {
   const email = req.body.email;
   const data = await getCustomerOrders({ "customer.email": email });
   res.json(data);
