@@ -16,7 +16,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/shops", shopsRouter);
-// app.use("/api/products", productsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/orders", ordersRouter);
 
