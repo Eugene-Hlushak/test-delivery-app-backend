@@ -7,14 +7,14 @@ const {
 } = require("../../services/orders");
 
 router.get("/", async (req, res, next) => {
-  const data = await getOrders();
-  res.json(data);
+  const orders = await getOrders();
+  res.json(orders);
 });
 
 router.get("/customer", async (req, res, next) => {
   const email = req.body.email;
-  const data = await getCustomerOrders({ "customer.email": email });
-  res.json(data);
+  const orders = await getCustomerOrders({ "customer.email": email });
+  res.json(orders);
 });
 
 router.post("/", async (req, res, next) => {
