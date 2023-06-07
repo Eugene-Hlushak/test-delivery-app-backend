@@ -3,6 +3,7 @@ const productSchema = new Schema({
   name: "String",
   price: "Number",
   quantity: "Number",
+  img: "String",
   shop: {
     type: Schema.Types.ObjectId,
     ref: "shop",
