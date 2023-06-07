@@ -1,7 +1,6 @@
 const ctrlWrapper = require("../helpers/ctrlWrapper");
 const {
   getShops,
-  //   getShopInfo,
   getProductsByShop,
 } = require("../services/shops/shopsServices");
 
